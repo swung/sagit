@@ -334,3 +334,11 @@ a.failed {
   text-align: right; }
   #footer strong {
     font-weight: bold; }
+
+div.exist_shiphomes {
+  display: inline;
+}
+
+div.exist_images {
+  display: inline;
+}
