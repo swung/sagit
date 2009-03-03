@@ -1,0 +1,18 @@
+!!! Strict
+%html{ :lang => "en", :"xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", :"http-equiv" => "Content-Type" }
+    %meta{ :content => "en", :"http-equiv" => "Content-Language" }
+    %title= "#{@title} | Sagit"
+    %link{ :media => "screen", :type => "text/css", :href => "/reset.css", :rel => "stylesheet" }
+    %link{ :media => "screen", :type => "text/css", :href => "/buttons.css", :rel => "stylesheet" }
+    %link{ :media => "screen", :type => "text/css", :href => "/sagit.css", :rel => "stylesheet" }
+    - unless @project.nil?
+      %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Build history Atom", :href => "#{project_path(@project)}.atom"}
+
+  %body
+    #header
+      %h1= @title
+      %address.watermark
+    #content= yield
+    #footer

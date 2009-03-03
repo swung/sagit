@@ -1,0 +1,12 @@
+.error
+  %h1
+    Whatever you do, DON'T PANIC!
+
+  %dl
+    %dt This is what happened:
+    %dd
+      %strong&= @error.message
+      %pre.backtrace= @error.backtrace.join("\n")
+    %dd
+      %strong Query parameters:
+      %pre.query_params= params.inspect

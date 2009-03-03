@@ -1,1 +1,12 @@
-home
+- if @shiphomes.empty?
+  .blank_slate
+    %p No shiphome yet, huh?
+    %h1
+      Try to create one?
+      = succeed "?" do
+        %a{ :href => "/new" } new
+- else
+  %ul#projects
+    - @shiphomes.each do |sh|
+      %li{ :class => cycle("even","odd") + " " + sh.result.to_s }
+        %a{ :href => "#" }&= sh.name

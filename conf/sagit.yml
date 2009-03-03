@@ -1,1 +1,1 @@
-:database_uri: sqlite://sagit.db
+:database_uri: sqlite://db/sagit.db
