@@ -1,10 +1,11 @@
-.exist_shiphomes
+%div{:class => "exist_shiphomes grid_6 alpha"}
   %ul#shiphomes
     - all_exist_shiphomes.each do |sh|
       %li{ :class => "shiphome" }&= sh
-.exist_images
+%div{:class => "exist_images grid_6 omega"}
   %ul#vmimages
     - all_exist_vmimages.each do |image|
       %li{ :class => "vmimage" }&= image
-.merge_shiphome_image
+%div{:class => "merge_shiphome_image grid_12"}
   %ul#merge
+  %input{:type=>"button",:text=>"Go..."}

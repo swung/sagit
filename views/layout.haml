@@ -5,6 +5,8 @@
     %meta{ :content => "en", :"http-equiv" => "Content-Language" }
     %title= "#{@title} | Sagit"
     %link{ :media => "screen", :type => "text/css", :href => "/reset.css", :rel => "stylesheet" }
+    %link{ :media => "screen", :type => "text/css", :href => "/960.css", :rel => "stylesheet" }
+    %link{ :media => "screen", :type => "text/css", :href => "/text.css", :rel => "stylesheet" }
     %link{ :media => "screen", :type => "text/css", :href => "/buttons.css", :rel => "stylesheet" }
     %link{ :media => "screen", :type => "text/css", :href => "/sagit.css", :rel => "stylesheet" }
     %script{ :type => "text/javascript", :src => "/jquery-1.3.2.js" }
@@ -14,8 +16,14 @@
       %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Build history Atom", :href => "#{project_path(@project)}.atom"}
 
   %body
-    #header
-      %h1= @title
-      %address.watermark
-    #content= yield
-    #footer
+    .container_12
+      #header{:class => "grid_12"}
+        %h1= @title
+      .clear
+      #menu{:class => "grid_12"}
+        %a{ :href=>"#", :class=> "grid_4 alpha"}&= "Start"
+        %a{ :href=>"#", :class=> "grid_4"}&= "Result"
+        %a{ :href=>"#", :class=> "grid_4 omega"}&= "Statistics"
+      .clear
+      #content{:class => "grid_12"}
+        = yield
