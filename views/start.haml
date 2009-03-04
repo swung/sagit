@@ -1,0 +1,10 @@
+.exist_shiphomes
+  %ul#shiphomes
+    - all_exist_shiphomes.each do |sh|
+      %li{ :class => "shiphome" }&= sh
+.exist_images
+  %ul#vmimages
+    - all_exist_vmimages.each do |image|
+      %li{ :class => "vmimage" }&= image
+.merge_shiphome_image
+  %ul#merge

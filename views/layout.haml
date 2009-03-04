@@ -7,6 +7,9 @@
     %link{ :media => "screen", :type => "text/css", :href => "/reset.css", :rel => "stylesheet" }
     %link{ :media => "screen", :type => "text/css", :href => "/buttons.css", :rel => "stylesheet" }
     %link{ :media => "screen", :type => "text/css", :href => "/sagit.css", :rel => "stylesheet" }
+    %script{ :type => "text/javascript", :src => "/jquery-1.3.2.js" }
+    %script{ :type => "text/javascript", :src => "/jquery-ui-1.6rc6.js" }
+    %script{ :type => "text/javascript", :src => "/sagit.js" }
     - unless @project.nil?
       %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Build history Atom", :href => "#{project_path(@project)}.atom"}
 

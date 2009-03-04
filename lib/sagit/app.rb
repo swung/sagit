@@ -23,8 +23,12 @@ module Sagit
 #   end
 
     get "/" do
+      show :start, :title => "Start"
+    end
+
+    get "/result" do
       @shiphomes = Shiphome.reverse_order(:start_at).limit(10)
-      show :home, :title => "Shiphomes"
+      show :result, :title => "Result"
     end
 
     get "/new" do

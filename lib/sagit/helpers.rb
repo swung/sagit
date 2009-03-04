@@ -4,7 +4,7 @@ module Sagit
   module Helpers
     include Rendering
     include PrettyOutput
-
+    include Watchdog
 #include Rack::Utils
 #    alias :h :escape_html
   end
